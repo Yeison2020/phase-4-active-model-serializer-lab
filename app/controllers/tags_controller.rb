@@ -3,7 +3,8 @@ class TagsController < ApplicationController
 
   def index
     tags = Tag.all
-    render json: tags, include: ['post_tags']
+    render json: tags, include: ['posts', 'post_tags']
+    # 'post_tags', 
   end
 
   def show
